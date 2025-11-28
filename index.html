@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#003366',
+                        gold: '#FFC72C',
+                        cyan: '#00BCD4',
+                        orange: '#FF8C00',
+                    },
+                    fontFamily: {
+                        'heading': ['Merriweather', 'serif'],
+                        'body': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.plot.ly/plotly-3.1.1.min.js"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="font-body bg-white">
+
+<header id="header" class="bg-navy border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-6">
+        <div class="bg-orange py-2">
+        <div class="container mx-auto px-6">
+            <p class="text-black text-center text-sm">
+                <i class="fa-solid fa-star text-navy mr-2"></i>
+                Welcome to InflightFlix - Your Gateway to Inflight Entertainment Marketing
+                <i class="fa-solid fa-star text-navy ml-2"></i>
+            </p>
+        </div>
+    </div>
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center space-x-12">
+                <a href="#" class="flex items-center">
+                    <img src="https://inflightflix.aero/wp-content/uploads/2025/04/iff-logo-long.png" width="150px;" height="100px;">
+                    <!-- <div class="text-3xl font-heading font-bold">
+                        <span class="text-gold">RISE</span>
+                        <span class="text-white ml-2">Program</span>
+                    </div> -->
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-white hover:text-gold transition-colors duration-300 font-medium">Home</a>
+                    <a href="#about" class="text-white hover:text-gold transition-colors duration-300 font-medium">About</a>
+                    <a href="#strategy" class="text-white hover:text-gold transition-colors duration-300 font-medium">Strategy</a>
+                    <a href="#partners" class="text-white hover:text-gold transition-colors duration-300 font-medium">Partners</a>
+                    <a href="#roi" class="text-white hover:text-gold transition-colors duration-300 font-medium">ROI Calculator</a>
+                    <a href="#case-studies" class="text-white hover:text-gold transition-colors duration-300 font-medium">Case Studies</a>
+                    <a href="#platform" class="text-white hover:text-gold transition-colors duration-300 font-medium">Platform</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#login" class="hidden lg:inline-block text-white hover:text-gold font-semibold transition-colors duration-300">
+                    <i class="fa-solid fa-user mr-2"></i>Login
+                </a>
+                <a href="#signup" class="hidden lg:inline-block text-white hover:text-gold font-semibold transition-colors duration-300 border-r border-gray-300 pr-4">
+                    Sign Up
+                </a>
+                <a href="#booking" class="hidden lg:inline-block bg-orange hover:bg-gold text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                    <i class="fa-solid fa-calendar-check mr-2"></i>Book Now
+                </a>
+                <button class="lg:hidden text-navy text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <!-- <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden lg:inline-block bg-orange hover:bg-gold text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">Get Started</a>
+                <button class="lg:hidden text-white text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div> -->
+        </div>
+    </div>
+    <div class="bg-cyan py-2">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center items-center space-x-8 text-sm font-semibold">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-plane text-white"></i>
+                    <span class="text-white">7 Partners</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-building text-white"></i>
+                    <span class="text-white">114 Airlines</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-users text-white"></i>
+                    <span class="text-white">2.3B Passengers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="hero" class="relative bg-navy h-[700px] overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover opacity-20" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2f579d1a50-358c9e4a6790ad914614.png" alt="airplane cabin interior with passengers looking at entertainment screens, modern luxury travel, cinematic lighting" />
+    </div>
+    <div class="relative container mx-auto px-6 h-full flex items-center">
+        <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+            <div class="text-white space-y-6">
+                <div class="inline-block bg-gold text-navy px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                    World's First Inflight Strategy-as-a-Service
+                </div>
+                <h1 class="text-6xl lg:text-7xl font-heading font-bold leading-tight">
+                    <span class="text-gold">Connecting</span><br/>
+                    <span class="text-white">Passengers</span><br/>
+                    <span class="text-cyan">&</span>
+                    <span class="text-white">Places</span>
+                </h1>
+                <p class="text-xl text-gray-300 leading-relaxed max-w-xl">
+                    RISE - Reasons to Visit Inflight Strategic Execution. Unlock the power of inflight entertainment to inspire, engage, and convert 2.3 billion passengers into visitors.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="bg-orange hover:bg-gold text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                        Schedule a Demo
+                    </a>
+                    <a href="#strategy" class="bg-transparent border-2 border-cyan text-cyan hover:bg-cyan hover:text-navy px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8 pt-6">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gold">100%</div>
+                        <div class="text-sm text-gray-400">Verified Travelers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-cyan">2-18hrs</div>
+                        <div class="text-sm text-gray-400">Dwell Time</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange">Zero</div>
+                        <div class="text-sm text-gray-400">Ad Waste</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan to-gold opacity-20 blur-3xl rounded-full"></div>
+                    <img class="relative w-full h-auto rounded-2xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/445dbde9b8-05eaf79adb4dc2a21d65.png" alt="modern airplane seat with entertainment screen showing destination content, premium travel experience, professional photography" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mission-vision" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Our Mission & Vision</h2>
+            <div class="w-24 h-1 bg-gold mx-auto"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="bg-white rounded-2xl shadow-xl p-10 border-t-4 border-cyan">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-cyan rounded-full flex items-center justify-center mr-4">
+                        <i class="fa-solid fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-heading font-bold text-navy">Mission</h3>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    To inspire passengers to visit great places by innovating and operating where destination marketing meets inflight entertainment — transforming how destinations reach, engage, and inspire real travelers when dreaming and planning where to go next.
+                </p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl p-10 border-t-4 border-gold">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mr-4">
+                        <i class="fa-solid fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-heading font-bold text-navy">Vision</h3>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    To create a central destination content platform for inflight entertainment via partnerships with leading destination marketers and inflight entertainment suppliers, providing airlines with destination content in globally consistent formats that inform, entertain, and inspire millions of passengers on flights globally every day.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-24 bg-navy text-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <div class="inline-block bg-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide mb-6">
+                    Why RISE Program?
+                </div>
+                <h2 class="text-5xl font-heading font-bold mb-6">The First-Mover Advantage in Inflight Marketing</h2>
+                <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                    Only 5% of DMOs have an inflight strategy. RISE Program provides turnkey inflight strategy-as-a-service for state and local DMOs, unlocking unprecedented access to the inflight entertainment industry.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <div class="text-4xl text-gold mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Pre-Approved Content</h4>
+                        <p class="text-gray-300">Content blueprint designed specifically for inflight entertainment standards</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <div class="text-4xl text-cyan mb-3"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Destination DAM</h4>
+                        <p class="text-gray-300">Platform for destinations to manage content assets for inflight suppliers</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <div class="text-4xl text-orange mb-3"><i class="fa-solid fa-handshake"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Strategic Partnerships</h4>
+                        <p class="text-gray-300">7 partners with 114 airlines reaching 2.3 billion passengers annually</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <div class="text-4xl text-gold mb-3"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Proven ROI</h4>
+                        <p class="text-gray-300">Strategic ROI calculator demonstrating measurable impact and results</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="relative">
+                    <img class="w-full h-auto rounded-2xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/75b622c245-1b3f28bc4060d852af95.png" alt="digital marketing dashboard showing travel analytics and destination metrics, modern interface design" />
+                    <div class="absolute -bottom-6 -right-6 bg-gold text-navy px-8 py-4 rounded-xl shadow-xl">
+                        <div class="text-3xl font-bold">95%</div>
+                        <div class="text-sm font-semibold">Market Opportunity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="value-props" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Core Value Propositions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Transform your destination marketing strategy with proven advantages that eliminate waste and maximize engagement</p>
+        </div>
+        <div class="grid lg:grid-cols-4 gap-8">
+            <div class="bg-gradient-to-br from-navy to-cyan text-white rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-bullseye text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Zero Ad Waste</h3>
+                <p class="text-gray-200 mb-4">100% verified travelers - every impression reaches a real passenger with travel intent</p>
+                <div class="border-t border-white border-opacity-30 pt-4">
+                    <span class="text-gold font-bold text-lg">100% Verified</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-cyan to-gold text-white rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-clock text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Captive Audience</h3>
+                <p class="text-gray-200 mb-4">2-18 hours dwell time - uninterrupted engagement during the entire flight journey</p>
+                <div class="border-t border-white border-opacity-30 pt-4">
+                    <span class="text-navy font-bold text-lg">Maximum Attention</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gold to-orange text-white rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-magnifying-glass text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Pre-Search Inspiration</h3>
+                <p class="text-gray-200 mb-4">Reach travelers before Google - inspire during the dream and planning phase</p>
+                <div class="border-t border-white border-opacity-30 pt-4">
+                    <span class="text-navy font-bold text-lg">Early Influence</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-orange to-navy text-white rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">First-Mover Edge</h3>
+                <p class="text-gray-200 mb-4">Only 5% of DMOs have inflight strategy - dominate an untapped channel</p>
+                <div class="border-t border-white border-opacity-30 pt-4">
+                    <span class="text-gold font-bold text-lg">Competitive Advantage</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="videos" class="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide mb-4">
+                Featured Content
+            </div>
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Destination Showcase Videos</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience how we bring destinations to life through compelling inflight entertainment content</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
+                <div class="relative h-64 bg-navy overflow-hidden group">
+                    <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/543d4c852d-ccf6c2427c9313faa490.png" alt="coastal destination aerial view, turquoise waters and beaches, cinematic travel video" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-20 h-20 bg-gold hover:bg-orange rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-2xl">
+                            <i class="fa-solid fa-play text-navy text-2xl ml-1"></i>
+                        </button>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-cyan text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <i class="fa-solid fa-clock mr-1"></i>2:45
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-cyan text-white px-3 py-1 rounded-full text-xs font-bold">COASTAL</span>
+                        <span class="bg-gold text-navy px-3 py-1 rounded-full text-xs font-bold">ADVENTURE</span>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-3">Discover Paradise Shores</h3>
+                    <p class="text-gray-700 mb-4">
+                        Explore pristine beaches, vibrant coral reefs, and world-class resorts along our stunning coastline. Perfect for families and adventure seekers.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-eye text-cyan"></i>
+                            <span>2.4M views</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-heart text-orange"></i>
+                            <span>98K likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
+                <div class="relative h-64 bg-navy overflow-hidden group">
+                    <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/366ce015b5-e585dfa8e99a2956769f.png" alt="mountain ski resort with alpine scenery, winter sports destination, cinematic video" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-20 h-20 bg-gold hover:bg-orange rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-2xl">
+                            <i class="fa-solid fa-play text-navy text-2xl ml-1"></i>
+                        </button>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-cyan text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <i class="fa-solid fa-clock mr-1"></i>3:15
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-navy text-white px-3 py-1 rounded-full text-xs font-bold">MOUNTAIN</span>
+                        <span class="bg-orange text-white px-3 py-1 rounded-full text-xs font-bold">WINTER</span>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-3">Alpine Winter Wonderland</h3>
+                    <p class="text-gray-700 mb-4">
+                        Experience world-renowned ski slopes, luxury mountain lodges, and breathtaking alpine vistas. Your ultimate winter escape destination.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-eye text-cyan"></i>
+                            <span>1.8M views</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-heart text-orange"></i>
+                            <span>76K likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
+                <div class="relative h-64 bg-navy overflow-hidden group">
+                    <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7d09828e34-ac17cf994cf177ca9805.png" alt="urban cityscape with modern architecture and cultural attractions, city tourism video" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-20 h-20 bg-gold hover:bg-orange rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-2xl">
+                            <i class="fa-solid fa-play text-navy text-2xl ml-1"></i>
+                        </button>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-cyan text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <i class="fa-solid fa-clock mr-1"></i>2:30
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="bg-gold text-navy px-3 py-1 rounded-full text-xs font-bold">URBAN</span>
+                        <span class="bg-cyan text-white px-3 py-1 rounded-full text-xs font-bold">CULTURE</span>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-3">Metropolitan Marvels</h3>
+                    <p class="text-gray-700 mb-4">
+                        Immerse yourself in world-class museums, vibrant nightlife, culinary excellence, and architectural wonders in our dynamic urban center.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-eye text-cyan"></i>
+                            <span>3.1M views</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-600">
+                            <i class="fa-solid fa-heart text-orange"></i>
+                            <span>112K likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-navy rounded-2xl p-12 text-white">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold mb-6">Why Video Content Matters</h3>
+                    <p class="text-gray-200 mb-6 text-lg leading-relaxed">
+                        Our professionally produced destination videos are optimized for inflight entertainment systems, capturing passenger attention during their journey and inspiring them to visit your destination.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-film text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">4K Ultra HD Quality</h4>
+                                <p class="text-gray-300">Crystal clear visuals optimized for modern IFE screens</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-language text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Multi-Language Support</h4>
+                                <p class="text-gray-300">Reach global audiences with localized content</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-chart-line text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Performance Analytics</h4>
+                                <p class="text-gray-300">Track views, engagement, and conversion metrics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <h4 class="text-2xl font-bold mb-6">Video Performance Stats</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Average View Duration</span>
+                                <span class="text-gold font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-white bg-opacity-20 rounded-full h-3">
+                                <div class="bg-gold h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Engagement Rate</span>
+                                <span class="text-cyan font-bold">72%</span>
+                            </div>
+                            <div class="w-full bg-white bg-opacity-20 rounded-full h-3">
+                                <div class="bg-cyan h-3 rounded-full" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Conversion to Interest</span>
+                                <span class="text-orange font-bold">68%</span>
+                            </div>
+                            <div class="w-full bg-white bg-opacity-20 rounded-full h-3">
+                                <div class="bg-orange h-3 rounded-full" style="width: 68%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="strategy" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-cyan text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide mb-4">
+                Strategic Framework
+            </div>
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">How RISE Works</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">A comprehensive strategy-as-a-service designed to maximize your destination's inflight presence</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-navy text-white p-6">
+                    <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-navy font-bold text-xl mb-4">1</div>
+                    <h3 class="text-2xl font-heading font-bold">Content Strategy</h3>
+                </div>
+                <div class="p-8">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-cyan text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Pre-approved content blueprint for IFE standards</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-cyan text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Globally consistent "Reasons to Visit" format</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-cyan text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Content that entertains, informs, and inspires</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-cyan text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Optimized for conversion during flight</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-cyan text-white p-6">
+                    <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-navy font-bold text-xl mb-4">2</div>
+                    <h3 class="text-2xl font-heading font-bold">Distribution Network</h3>
+                </div>
+                <div class="p-8">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-orange text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Access to 7 major IFE partners</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-orange text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Distribution across 114 airlines globally</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-orange text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Reach 2.3 billion passengers annually</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-orange text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Target specific airlines aligned to key markets</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-gold text-navy p-6">
+                    <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">3</div>
+                    <h3 class="text-2xl font-heading font-bold">Performance & ROI</h3>
+                </div>
+                <div class="p-8">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-navy text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Strategic ROI calculator for proof of value</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-navy text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">KPI-aligned airline promotion strategy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-navy text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Measurable impact on visitation rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-navy text-xl mr-3 mt-1"></i>
+                            <span class="text-gray-700">Maximize ROI, minimize ad wastage</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-4xl font-heading font-bold text-navy mb-6">The RISE Advantage</h3>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        For State Destination Marketing Organizations to increase visitation, maximize ROI, and minimize ad wastage by executing an inflight destination marketing strategy that effectively creates and distributes "Reasons to Visit" content across multiple airlines' inflight entertainment systems.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-users text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Target Audiences with Air Access</h4>
+                                <p class="text-gray-600">Reach passengers on routes directly serving your destination</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-heart text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Engage with Inspiring Content</h4>
+                                <p class="text-gray-600">Reasons to Visit that inspire interest and emotional connection</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-plane-departure text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Convert Interest to Intent</h4>
+                                <p class="text-gray-600">Inflight on connected aircraft with immediate booking capability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full h-auto rounded-xl shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7d09828e34-ac17cf994cf177ca9805.png" alt="modern inflight entertainment screen showing beautiful destination content, passenger engaging with touchscreen, premium airline cabin" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="partners" class="py-24 bg-navy text-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold mb-4">Our Partnership Network</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Strategic partnerships with leading inflight entertainment suppliers connecting you to the world's major airlines</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div class="text-6xl font-bold text-gold mb-2">7</div>
+                <div class="text-xl font-semibold mb-2">IFE Partners</div>
+                <p class="text-gray-300">Leading inflight entertainment content suppliers globally</p>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div class="text-6xl font-bold text-cyan mb-2">114</div>
+                <div class="text-xl font-semibold mb-2">Airlines</div>
+                <p class="text-gray-300">Major carriers across all continents and regions</p>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <div class="text-6xl font-bold text-orange mb-2">2.3B</div>
+                <div class="text-xl font-semibold mb-2">Passengers</div>
+                <p class="text-gray-300">Annual reach to engaged travelers worldwide</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl p-12">
+            <h3 class="text-3xl font-heading font-bold text-navy mb-8 text-center">Partnership Benefits</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-globe text-white text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">Global Reach</h4>
+                    <p class="text-gray-600 text-sm">Access to international routes and markets</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-handshake text-navy text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">Established Relationships</h4>
+                    <p class="text-gray-600 text-sm">Pre-existing partnerships with airlines</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-gears text-white text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">Technical Integration</h4>
+                    <p class="text-gray-600 text-sm">Seamless content delivery systems</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-chart-line text-white text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">Performance Tracking</h4>
+                    <p class="text-gray-600 text-sm">Comprehensive analytics and reporting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="roi" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide mb-4">
+                Proven Results
+            </div>
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Strategic ROI Calculator</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Calculate your destination's potential return on investment with our comprehensive ROI framework</p>
+        </div>
+        <div class="bg-gradient-to-br from-navy to-cyan rounded-2xl shadow-2xl overflow-hidden mb-12">
+            <div class="grid lg:grid-cols-2 gap-0">
+                <div class="p-12 text-white">
+                    <h3 class="text-3xl font-heading font-bold mb-6">ROI Metrics That Matter</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-eye text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Impression Value</h4>
+                                <p class="text-gray-200">Calculate cost per verified traveler impression vs traditional advertising</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Engagement Duration</h4>
+                                <p class="text-gray-200">Measure extended dwell time impact on brand recall and consideration</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-plane-arrival text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Visitation Lift</h4>
+                                <p class="text-gray-200">Track incremental visitors attributed to inflight content exposure</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-dollar-sign text-navy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Economic Impact</h4>
+                                <p class="text-gray-200">Measure visitor spending and total economic contribution to destination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-12">
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-6">Sample ROI Projection</h3>
+                    <div id="roi-chart" style="height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-cyan">
+                <div class="text-4xl font-bold text-cyan mb-2">3.5x</div>
+                <div class="text-lg font-semibold text-navy mb-2">Average ROI Multiplier</div>
+                <p class="text-gray-600">Destinations see 3.5x return on inflight marketing investment</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-gold">
+                <div class="text-4xl font-bold text-gold mb-2">68%</div>
+                <div class="text-lg font-semibold text-navy mb-2">Consideration Increase</div>
+                <p class="text-gray-600">Passengers exposed to content show higher destination consideration</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-orange">
+                <div class="text-4xl font-bold text-orange mb-2">42%</div>
+                <div class="text-lg font-semibold text-navy mb-2">Booking Intent Lift</div>
+                <p class="text-gray-600">Significant increase in booking intent after inflight content exposure</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="case-studies" class="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Success Stories</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real results from destinations leveraging the RISE Program</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/543d4c852d-ccf6c2427c9313faa490.png" alt="beautiful coastal destination with beaches and resorts, aerial view, tourism photography" />
+                </div>
+                <div class="p-8">
+                    <div class="inline-block bg-cyan text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-4">State DMO</div>
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-4">Coastal State Tourism Board</h3>
+                    <p class="text-gray-700 mb-6">
+                        Implemented RISE Program across 23 airlines serving their coastal region, resulting in measurable increases in visitation from key international markets.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <div class="text-3xl font-bold text-cyan">+28%</div>
+                            <div class="text-sm text-gray-600">Visitation Increase</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gold">4.2x</div>
+                            <div class="text-sm text-gray-600">ROI Multiple</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-orange">$3.2M</div>
+                            <div class="text-sm text-gray-600">Economic Impact</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/366ce015b5-e585dfa8e99a2956769f.png" alt="mountain destination with ski resorts and alpine scenery, winter tourism, professional photography" />
+                </div>
+                <div class="p-8">
+                    <div class="inline-block bg-gold text-navy px-3 py-1 rounded-full text-xs font-bold uppercase mb-4">Regional DMO</div>
+                    <h3 class="text-2xl font-heading font-bold text-navy mb-4">Mountain Region Tourism Alliance</h3>
+                    <p class="text-gray-700 mb-6">
+                        Targeted winter sports enthusiasts on specific airline routes, achieving exceptional engagement rates and measurable booking conversions.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <div class="text-3xl font-bold text-cyan">+35%</div>
+                            <div class="text-sm text-gray-600">Winter Bookings</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gold">5.1x</div>
+                            <div class="text-sm text-gray-600">ROI Multiple</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-orange">$4.8M</div>
+                            <div class="text-sm text-gray-600">Economic Impact</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-navy text-white rounded-2xl p-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold mb-6">Why Destinations Choose RISE</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <i class="fa-solid fa-quote-left text-gold text-2xl mt-1"></i>
+                            <p class="text-lg text-gray-200 italic">
+                                "RISE Program gave us access to an entirely new channel we couldn't have navigated alone. The results exceeded our expectations."
+                            </p>
+                        </div>
+                        <div class="pl-10">
+                            <p class="font-bold">Director of Marketing</p>
+                            <p class="text-gray-400">State Tourism Board</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                        <h4 class="text-xl font-bold mb-6">Key Success Factors</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle text-gold"></i>
+                                <span>Strategic airline route alignment</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle text-gold"></i>
+                                <span>Compelling "Reasons to Visit" content</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle text-gold"></i>
+                                <span>Multi-touchpoint engagement strategy</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle text-gold"></i>
+                                <span>Continuous performance optimization</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle text-gold"></i>
+                                <span>Integrated marketing campaigns</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="platform" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-navy text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide mb-4">
+                Technology Platform
+            </div>
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Destination Asset Management</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Centralized platform for managing and distributing your destination content to inflight entertainment suppliers</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <img class="w-full h-auto rounded-2xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/79c810e6c0-a3490a823060839bbcfe.png" alt="modern digital asset management interface dashboard showing travel content library, professional UI design" />
+            </div>
+            <div>
+                <h3 class="text-3xl font-heading font-bold text-navy mb-6">Destination DAM Features</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-cloud-arrow-up text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg mb-1">Content Upload & Storage</h4>
+                            <p class="text-gray-600">Secure cloud storage for all destination marketing assets with version control</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-tags text-navy text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg mb-1">Metadata Management</h4>
+                            <p class="text-gray-600">Comprehensive tagging and categorization for easy content discovery</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-orange rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-share-nodes text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg mb-1">Distribution Control</h4>
+                            <p class="text-gray-600">Manage content distribution to multiple IFE suppliers from one platform</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-chart-simple text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy text-lg mb-1">Performance Analytics</h4>
+                            <p class="text-gray-600">Real-time tracking of content performance across airlines and routes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-12">
+            <h3 class="text-3xl font-heading font-bold text-navy mb-8 text-center">Platform Integration Ecosystem</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-plane text-white text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">IFE Suppliers</h4>
+                    <p class="text-gray-600 text-sm">Direct integration with 7 major suppliers</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-database text-navy text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">CRM Systems</h4>
+                    <p class="text-gray-600 text-sm">GoHighLevel integration for lead management</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">Analytics Tools</h4>
+                    <p class="text-gray-600 text-sm">Comprehensive reporting and insights</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-link text-white text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-navy mb-2">API Access</h4>
+                    <p class="text-gray-600 text-sm">RESTful API for custom integrations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stats-overview" class="py-24 bg-navy text-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold mb-4">By The Numbers</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">The scale and impact of the RISE Program network</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <i class="fa-solid fa-handshake text-gold text-5xl mb-4"></i>
+                <div class="text-5xl font-bold mb-2">7</div>
+                <div class="text-xl font-semibold mb-2">IFE Partners</div>
+                <p class="text-gray-300 text-sm">Major inflight entertainment content suppliers</p>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <i class="fa-solid fa-plane-departure text-cyan text-5xl mb-4"></i>
+                <div class="text-5xl font-bold mb-2">114</div>
+                <div class="text-xl font-semibold mb-2">Airlines</div>
+                <p class="text-gray-300 text-sm">Global carriers across all major routes</p>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <i class="fa-solid fa-users text-orange text-5xl mb-4"></i>
+                <div class="text-5xl font-bold mb-2">2.3B</div>
+                <div class="text-xl font-semibold mb-2">Passengers</div>
+                <p class="text-gray-300 text-sm">Annual passenger reach worldwide</p>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
+                <i class="fa-solid fa-percent text-gold text-5xl mb-4"></i>
+                <div class="text-5xl font-bold mb-2">95%</div>
+                <div class="text-xl font-semibold mb-2">Market Gap</div>
+                <p class="text-gray-300 text-sm">DMOs without inflight strategy</p>
+            </div>
+        </div>
+        <div id="network-chart" style="height: 500px;" class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8"></div>
+    </div>
+</section>
+
+<section id="content-formats" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Content Formats</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Globally consistent "Reasons to Visit" content optimized for inflight entertainment systems</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-cyan to-navy text-white rounded-2xl p-8 shadow-xl">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-video text-cyan text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Video Content</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>30-90 second destination highlights</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>4K ultra-high definition quality</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Multiple language versions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Optimized for IFE screens</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-gold to-orange text-white rounded-2xl p-8 shadow-xl">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-images text-gold text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Interactive Galleries</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-navy mr-2 mt-1"></i>
+                        <span>High-resolution photo collections</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-navy mr-2 mt-1"></i>
+                        <span>Touch-enabled browsing experience</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-navy mr-2 mt-1"></i>
+                        <span>Curated thematic collections</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-navy mr-2 mt-1"></i>
+                        <span>Integrated booking CTAs</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-orange to-navy text-white rounded-2xl p-8 shadow-xl">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-book-open text-orange text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Editorial Features</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Long-form destination stories</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Local expert recommendations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Seasonal travel guides</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-gold mr-2 mt-1"></i>
+                        <span>Cultural insights and tips</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-navy mb-6">Content Standards</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        All content follows pre-approved blueprints designed specifically for inflight entertainment systems, ensuring consistency, quality, and optimal engagement across all touchpoints.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-cyan rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Airline-approved formats and specifications</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-check text-navy"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Multi-language support and localization</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-orange rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Accessibility compliance (WCAG standards)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-navy rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Regular content updates and refreshes</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full h-auto rounded-xl shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c0fa430198-0b422c4c5695cc935097.png" alt="professional content creation studio for travel videos, high-end production equipment, modern workspace" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="process" class="py-24 bg-gradient-to-br from-navy to-cyan text-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold mb-4">Implementation Process</h2>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">From onboarding to optimization, we guide you through every step</p>
+        </div>
+        <div class="grid lg:grid-cols-4 gap-8">
+            <div class="relative">
+                <div class="bg-white text-navy rounded-2xl p-8 shadow-xl h-full">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-2xl font-bold mb-6">1</div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Discovery & Strategy</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Initial consultation and needs assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Target market and airline route analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>KPI definition and goal setting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Budget and ROI projections</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                    <i class="fa-solid fa-arrow-right text-gold text-3xl"></i>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-white text-navy rounded-2xl p-8 shadow-xl h-full">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-2xl font-bold mb-6">2</div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Content Development</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-orange text-xs mr-2 mt-1"></i>
+                            <span>Content audit and asset collection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-orange text-xs mr-2 mt-1"></i>
+                            <span>Production of new content as needed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-orange text-xs mr-2 mt-1"></i>
+                            <span>Formatting to IFE specifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-orange text-xs mr-2 mt-1"></i>
+                            <span>Quality assurance and approval</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                    <i class="fa-solid fa-arrow-right text-gold text-3xl"></i>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-white text-navy rounded-2xl p-8 shadow-xl h-full">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-2xl font-bold mb-6">3</div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Distribution & Launch</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-navy text-xs mr-2 mt-1"></i>
+                            <span>Platform setup and integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-navy text-xs mr-2 mt-1"></i>
+                            <span>Content deployment to IFE partners</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-navy text-xs mr-2 mt-1"></i>
+                            <span>Airline-specific customization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-navy text-xs mr-2 mt-1"></i>
+                            <span>Launch coordination and monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                    <i class="fa-solid fa-arrow-right text-gold text-3xl"></i>
+                </div>
+            </div>
+            <div>
+                <div class="bg-white text-navy rounded-2xl p-8 shadow-xl h-full">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-2xl font-bold mb-6">4</div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Optimization & Reporting</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Performance tracking and analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Monthly reporting and insights</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Content refresh and updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle text-cyan text-xs mr-2 mt-1"></i>
+                            <span>Continuous improvement recommendations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 text-center">
+            <p class="text-xl mb-6">Average time from onboarding to launch: <span class="font-bold text-gold">6-8 weeks</span></p>
+            <a href="#contact" class="inline-block bg-orange hover:bg-gold text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                Start Your Journey
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-heading font-bold text-navy mb-4">Frequently Asked Questions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about the RISE Program</p>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-cyan">
+                <h3 class="text-xl font-bold text-navy mb-3">What makes RISE different from traditional advertising?</h3>
+                <p class="text-gray-700">RISE targets 100% verified travelers with genuine travel intent, eliminating ad waste entirely. Unlike traditional advertising that reaches broad audiences, every RISE impression reaches someone actively flying, with 2-18 hours of uninterrupted engagement time.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-gold">
+                <h3 class="text-xl font-bold text-navy mb-3">How long does it take to see results?</h3>
+                <p class="text-gray-700">Most destinations begin seeing measurable results within 3-6 months of launch. However, the full impact typically manifests over 12-18 months as content reaches more passengers and brand awareness builds across multiple touchpoints.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-orange">
+                <h3 class="text-xl font-bold text-navy mb-3">What is the typical ROI for RISE Program participants?</h3>
+                <p class="text-gray-700">Our clients typically see 3.5-5x ROI multipliers, with some achieving even higher returns. The exact ROI depends on factors like destination appeal, airline route alignment, content quality, and overall marketing integration.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-cyan">
+                <h3 class="text-xl font-bold text-navy mb-3">Do we need existing content or will you create it?</h3>
+                <p class="text-gray-700">We work with both scenarios. If you have existing high-quality content, we can adapt it to IFE specifications. If new content is needed, we can coordinate production or connect you with our network of content creators.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-gold">
+                <h3 class="text-xl font-bold text-navy mb-3">Which airlines will feature our destination?</h3>
+                <p class="text-gray-700">Airline selection is strategic and based on your target markets, existing air access, and growth opportunities. We analyze route networks across our 114 partner airlines to identify the best opportunities for your destination.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-orange">
+                <h3 class="text-xl font-bold text-navy mb-3">How do you measure performance and success?</h3>
+                <p class="text-gray-700">We track multiple metrics including impressions, engagement time, content interactions, website referrals, and most importantly, incremental visitation attributed to inflight exposure. Monthly reports provide comprehensive performance insights.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 border-l-4 border-navy">
+                <h3 class="text-xl font-bold text-navy mb-3">Is RISE suitable for small or regional destinations?</h3>
+                <p class="text-gray-700">Absolutely. RISE is designed to be scalable for destinations of all sizes. We can tailor the program to focus on specific airlines and routes that serve your destination, making it cost-effective even for smaller DMOs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-24 bg-gradient-to-br from-navy via-cyan to-navy text-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-heading font-bold mb-4">Ready to Transform Your Destination Marketing?</h2>
+                <p class="text-xl text-gray-200">Connect with us to discover how RISE can unlock the inflight opportunity for your destination</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10">
+                    <h3 class="text-2xl font-heading font-bold mb-6">Get In Touch</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Organization Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="Your DMO or Tourism Board">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="john.doe@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:border-gold" placeholder="Tell us about your destination and goals..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-orange hover:bg-gold text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                            Schedule a Demo
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10 mb-8">
+                        <h3 class="text-2xl font-heading font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-user text-navy text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Martin O'Regan</h4>
+                                    <p class="text-gray-200">Chief Executive Officer</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <a href="mailto:martin@inflightflix.aero" class="text-gray-200 hover:text-gold transition-colors">martin@inflightflix.aero</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <a href="tel:+353861923500" class="text-gray-200 hover:text-gold transition-colors">+353 86 192 3500</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-globe text-navy text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Website</h4>
+                                    <a href="https://www.inflightflix.aero" target="_blank" class="text-gray-200 hover:text-gold transition-colors">www.inflightflix.aero</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10">
+                        <h3 class="text-xl font-heading font-bold mb-4">What Happens Next?</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-gold mr-3 mt-1"></i>
+                                <span>We'll review your information and destination profile</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-gold mr-3 mt-1"></i>
+                                <span>Schedule a personalized demo within 48 hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-gold mr-3 mt-1"></i>
+                                <span>Discuss your specific goals and opportunities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-gold mr-3 mt-1"></i>
+                                <span>Provide customized ROI projections</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-navy text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-4 gap-12 mb-12">
+            <div>
+                <img src="https://inflightflix.aero/wp-content/uploads/2025/04/iff-logo-long.png" width="150px;" height="100px;">
+                <!-- <div class="text-3xl font-heading font-bold mb-4">
+                    <span class="text-gold">RISE</span>
+                    <span class="text-white ml-2">Program</span>
+                </div> -->
+                <p class="text-gray-300 mb-6">Connecting passengers and places through strategic inflight destination marketing.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-cyan rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                        <i class="fa-brands fa-linkedin text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-cyan rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                        <i class="fa-brands fa-twitter text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-cyan rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                        <i class="fa-brands fa-facebook text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-cyan rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                        <i class="fa-brands fa-instagram text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="text-gray-300 hover:text-gold transition-colors">About RISE</a></li>
+                    <li><a href="#strategy" class="text-gray-300 hover:text-gold transition-colors">How It Works</a></li>
+                    <li><a href="#partners" class="text-gray-300 hover:text-gold transition-colors">Partners</a></li>
+                    <li><a href="#case-studies" class="text-gray-300 hover:text-gold transition-colors">Case Studies</a></li>
+                    <li><a href="#platform" class="text-gray-300 hover:text-gold transition-colors">Platform</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-gold transition-colors">Brand Guidelines</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-gold transition-colors">Content Standards</a></li>
+                    <li><a href="#roi" class="text-gray-300 hover:text-gold transition-colors">ROI Calculator</a></li>
+                    <li><a href="#faq" class="text-gray-300 hover:text-gold transition-colors">FAQ</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-gold transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                <p class="text-gray-300 mb-4">Stay updated with the latest inflight marketing insights</p>
+                <form class="space-y-3">
+                    <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-30 text-white placeholder-gray-400 focus:outline-none focus:border-gold">
+                    <button class="w-full bg-orange hover:bg-gold text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-white border-opacity-20 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-gray-400 text-sm">© 2025 InflightFlix. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+window.addEventListener('load', function() {
+    try {
+        var roiData = [{
+            x: ['Traditional Advertising', 'Digital Marketing', 'Social Media', 'RISE Program'],
+            y: [1.2, 2.1, 1.8, 4.2],
+            type: 'bar',
+            marker: {
+                color: ['#00BCD4', '#00BCD4', '#00BCD4', '#FFC72C']
+            }
+        }];
+        
+        var roiLayout = {
+            title: { text: 'ROI Comparison Across Channels', font: { size: 18 } },
+            xaxis: { title: 'Marketing Channel' },
+            yaxis: { title: 'ROI Multiple' },
+            margin: { t: 60, r: 20, b: 80, l: 60 },
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#ffffff',
+            showlegend: false
+        };
+        
+        var config = {responsive: true, displayModeBar: false, displaylogo: false};
+        Plotly.newPlot('roi-chart', roiData, roiLayout, config);
+    } catch(e) {
+        document.getElementById('roi-chart').innerHTML = '<div class="flex items-center justify-center h-full text-gray-500">Chart visualization</div>';
+    }
+
+    try {
+        var networkData = [{
+            type: 'sankey',
+            node: {
+                pad: 15,
+                thickness: 20,
+                line: { color: 'white', width: 0.5 },
+                label: ['RISE Program', 'IFE Partners (7)', 'Airlines (114)', 'Passengers (2.3B)', 'North America', 'Europe', 'Asia Pacific', 'Middle East', 'Latin America', 'Africa'],
+                color: ['#FFC72C', '#00BCD4', '#003366', '#FF8C00', '#00BCD4', '#00BCD4', '#00BCD4', '#00BCD4', '#00BCD4', '#00BCD4']
+            },
+            link: {
+                source: [0, 0, 1, 1, 2, 2, 2, 2, 2, 2],
+                target: [1, 2, 2, 3, 4, 5, 6, 7, 8, 9],
+                value: [7, 114, 114, 2300, 800, 600, 500, 200, 150, 50]
+            }
+        }];
+        
+        var networkLayout = {
+            title: { text: 'RISE Program Distribution Network', font: { size: 20, color: 'white' } },
+            font: { size: 12, color: 'white' },
+            plot_bgcolor: 'rgba(255,255,255,0.1)',
+            paper_bgcolor: 'rgba(255,255,255,0.1)',
+            margin: { t: 60, r: 20, b: 20, l: 20 }
+        };
+        
+        Plotly.newPlot('network-chart', networkData, networkLayout, config);
+    } catch(e) {
+        document.getElementById('network-chart').innerHTML = '<div class="flex items-center justify-center h-full text-white">Network visualization</div>';
+    }
+});
+</script>
+
+</body>
+</html>
